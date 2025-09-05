@@ -8,15 +8,11 @@ $db="mydb";
 
 $conn=mysqli_connect($server,$user,$pass,$db);
  
-if($conn)
-{
-    echo "Connected";
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+  
  
- 
-
-else
-echo "Not Connected ";
 
 ?>
 
